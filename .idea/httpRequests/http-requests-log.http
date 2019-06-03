@@ -1,0 +1,28 @@
+GET http://127.0.0.1:5000/x
+Accept: application/json
+
+<> 2019-06-02T055344.200.html
+
+###
+
+GET http://127.0.0.1:5000/x
+Accept: application/json
+
+<> 2019-06-02T050902.200.html
+
+###
+
+GET http://127.0.0.1:5000
+Accept: application/json
+
+<> 2019-06-02T050841.404.html
+
+###
+
+GET http://localhost:5000
+Accept: application/json
+
+<> 2019-06-02T050817.404.html
+
+###
+
