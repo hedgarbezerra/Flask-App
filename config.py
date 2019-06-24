@@ -23,4 +23,4 @@ key = ''.join(random.choice(gen) for i in range(12))
 SQLALCHEMY_DATABASE_URI = f'mysql://{user}:{passwd}@{host}:{port}/{dbc}'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = key
-DEBUG = False
+DEBUG = True

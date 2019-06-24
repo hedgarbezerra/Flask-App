@@ -1,11 +1,10 @@
+from flask_sqlalchemy import SQLAlchemy
 from app import app, db
-from flask import request, render_template
+from flask import request, render_template, redirect, flash
+from werkzeug.security import check_password_hash, generate_password_hash
+from app.models.user import User
 from app.models.user_img import UserImg
-
-
-@app.route('/x')
-def hello_world():
-    return 'Hello!'
+from app.models_forms.user_form import UserForm
 
 
 @app.route('/create', methods=['POST'])
@@ -18,11 +17,38 @@ def create():
 
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
-    if request.method == 'GET':
-        return render_template('users/signup.html')
+    form = UserForm()
 
-    elif request.method == 'POST':
-        pass
+    if request.method == 'POST' and form.validate_on_submit():
+        username = form.username.data
+        passwd = form.password.data
+        passwd_hash = generate_password_hash(passwd)
+        born_on = form.born_on.data
+        name = form.name.data
+        email = form.email.data
+        gender = form.gender.data
 
-    else:
-        return render_template('errors.html')
+        user = User(name=name, username=username, email=email, password=passwd_hash, gender=gender, born_on=born_on)
+
+        try:
+            db.session.add(user)
+            db.session.commit()
+            flash('Sucessfully signed up!')
+            return redirect('/index')
+        except:
+            flash('Something went wrong, try again.')
+            return render_template('users/signup.html', form=form)
+
+    return render_template('users/signup.html', form=form)
+
+
+@app.route('/ct', methods=['POST', 'GET'])
+def ct():
+    user = User(name='hed', username='hed', email='hed',
+                password='hed', gender='M', born_on='1993-01-12')
+
+    try:
+        db.session.add(user)
+        db.session.commit()
+    except:
+        print('erro')

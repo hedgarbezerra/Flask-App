@@ -1,3 +1,24 @@
+POST http://127.0.0.1:5000/ct
+Accept: application/json
+
+<> 2019-06-03T025516.500.html
+
+###
+
+POST http://127.0.0.1:5000/ct
+Accept: application/json
+
+<> 2019-06-03T025433.400.html
+
+###
+
+POST http://127.0.0.1:5000/ct
+Accept: application/json
+
+<> 2019-06-03T025209.400.html
+
+###
+
 GET http://127.0.0.1:5000/x
 Accept: application/json
 

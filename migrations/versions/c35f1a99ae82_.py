@@ -23,7 +23,7 @@ def upgrade():
     sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
     sa.Column('name', sa.String(length=100), nullable=False),
     sa.Column('username', sa.String(length=15), nullable=False),
-    sa.Column('password', sa.String(length=30), nullable=False),
+    sa.Column('password', sa.String(length=150), nullable=False),
     sa.Column('email', sa.String(length=100), nullable=False),
     sa.Column('gender', sqlalchemy_utils.types.choice.ChoiceType(User.genders), nullable=True),
     sa.Column('born_on', sa.Date(), nullable=True),

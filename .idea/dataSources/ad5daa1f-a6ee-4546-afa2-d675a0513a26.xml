@@ -1081,8 +1081,7 @@
     </column>
     <column id="266" parent="240" name="password">
       <Position>4</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(150)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="267" parent="240" name="email">

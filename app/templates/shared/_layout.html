@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <script src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
-    
+
     <title> {% block title %} {% endblock %} - Flask App</title>
     <body>
 
@@ -21,8 +18,12 @@
 
             {% endblock %}
         </div>
+     <script src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
     </body>
     <footer>
-        <p><i class="fas fa-laptop-code"></i> Hedgar Bezerra  - Flask App </p>
+        <p><i class="fas fa-laptop-code"></i> Hedgar Bezerra  - XCution </p>
     </footer>
 </html>

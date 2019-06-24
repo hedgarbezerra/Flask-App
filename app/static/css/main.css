@@ -1,19 +1,21 @@
-﻿body , html{
-    height: 100%;
-    background-color: #dbe9f9;
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto:500&display=swap');
+
+body , html{
+    font-family: Montserrat, Roboto, sans-serif; !important;
 }
+
 body{
+    background-color: #cdd2ff;
+    height: 100%;
     display:flex;
-    flex-direction:column;
 }
 
 .body-content {
-    flex: 1 0 auto;
     margin-top: 4em;
     padding: 20px;
     padding-bottom: 0px;
-
 }
+
 a {
     text-decoration: none !important
 }
@@ -24,7 +26,7 @@ a {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+
 input,
 select,
 textarea {
@@ -43,15 +45,14 @@ textarea {
     background-color: rgba(193, 212, 231, 1)
 }
 footer {
-    height:3em;
+    height:2.5em;
+    background-color: white;
+    padding-top: 2em;
     bottom: 0;
     display: flex;
     flex-shrink:0;
     justify-content: center;
     align-items: center;
-}
-.carousel-caption {
-   color:black;
 }
 
 i {
