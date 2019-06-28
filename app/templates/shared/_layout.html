@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <title> {% block title %} {% endblock %} - Flask App</title>
-    <body>
 
-            {% include "shared/_nav.html" %}
+    <body>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+    {% include "shared/_nav.html" %}
 
         <div class="container body-content">
             {% block main%}
 
             {% endblock %}
         </div>
-     <script src="{{ url_for('static', filename='js/jquery-3.3.1.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
+    {% include "shared/_messages.html" %}
 
     </body>
     <footer>

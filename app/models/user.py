@@ -1,4 +1,6 @@
 import datetime
+
+from sqlalchemy.orm import relationship
 from sqlalchemy_utils import ChoiceType
 from app import db
 
@@ -20,3 +22,4 @@ class User(db.Model):
     gender = db.Column(ChoiceType(genders))
     born_on = db.Column(db.Date)
     created_at = db.Column(db.DateTime, default=datetime.datetime.now())
+    user_img = relationship("UserImg", uselist=False, back_populates="user")

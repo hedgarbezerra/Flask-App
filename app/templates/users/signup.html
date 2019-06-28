@@ -1,0 +1,79 @@
+{% extends "shared/_layout.html" %}
+
+{% block title %} Sign up {% endblock %}
+
+{% block main %}
+
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+
+            {{ form.csrf_token }}
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="name"> Name </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ form.name(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="password"> Password </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ form.password(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="confirm"> Confirm your password </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ form.confirm(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="email"> Email  </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ form.email(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="born_on"> Birthday  </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ form.born_on(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="gender"> Pick your gender </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ form.gender(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-6 text-right">
+                    <div class="input-group offset-7">
+                        <button class="btn btn-outline-success">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+  {% include "shared/_errors.html" %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "shared/_layout.html" %}
+{% block title %} Profile Image {% endblock %}
+{% block main %}
+<form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <label for="name">File</label>
+    {{form.photo }}
+
+    <button class="btn btn-outline-success">Submit</button>
+
+</form>
+{% endblock %}

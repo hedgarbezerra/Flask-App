@@ -1,0 +1,40 @@
+{% extends "shared/_layout.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.csrf_token }}
+
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-3 text-center">
+                <label for="username"> Username </label>
+                <div class="input-group mx-auto mb-3">
+                    {{ form.username(class='form-control') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-3 text-center">
+                <label for="password"> Password </label>
+                <div class="input-group mx-auto mb-3">
+                    {{ form.password(class='form-control') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row justify-content-center">
+            <div class="offset-lg-4 col-lg-9">
+                 <label> {{ form.remember(class="checkbox") }} Remember me </label>
+
+                <button class="btn btn-outline-success offset-2">Submit</button>
+             </div>
+
+        </div>
+    </form>
+</div>
+    {% include "shared/_errors.html" %}
+{% endblock %}
