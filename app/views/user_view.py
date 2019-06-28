@@ -1,8 +1,7 @@
 import os
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 from app import app, db
-from flask import request, render_template, redirect, flash
+from flask import request, render_template, redirect, flash, make_response, session, url_for
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.models.user import User
 from app.models.user_img import UserImg
@@ -44,7 +43,10 @@ def create():
 
 
 @app.route('/signup', methods=['POST', 'GET'])
-def signup(): 
+def signup():
+    if is_logged():
+        return redirect('/index')
+
     form = userForm()
 
     if form.validate_on_submit():
@@ -61,9 +63,9 @@ def signup():
             db.session.add(user)
             db.session.commit()
             flash('Sucessfully signed up!')
-            return redirect('/index')
+            return redirect('/login')
         except:
-            flash('Something went wrong, try again.')
+            flash('Something went wrong, please try again.')
             return render_template('users/signup.html', form=form)
 
     return render_template('users/signup.html', form=form)
@@ -71,11 +73,15 @@ def signup():
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
+    if is_logged():
+        return redirect('/index')
+
     form = loginForm()
 
     if form.validate_on_submit():
         username = form.username.data
-        password = generate_password_hash(form.password.data)
+        password = form.password.data
+        remember = form.remember.data
         user = username_exists(username)
 
         if not user:
@@ -88,10 +94,20 @@ def login():
 
         if user and check_password_hash(user.password, password):
             flash('Sucessfully logged in!')
+
+            if remember:
+                pass
+            else:
+                session['username'] = username
             return redirect('/index')
 
     return render_template('users/login.html', form=form)
 
+
+@app.route('/logout', methods=['GET', 'DELETE'])
+def logout():
+    session.pop('username', None)
+    return redirect('/login')
 
 
 def username_exists(username):
@@ -100,9 +116,20 @@ def username_exists(username):
     except:
         return None
 
+
 def email_exists(email):
     try:
         return User.query.filter(User.email == email).one()
     except:
         return None
 
+
+def current_user():
+    return username_exists(session['username'])
+
+
+def is_logged():
+    if 'username' in session:
+        return True
+
+    return False

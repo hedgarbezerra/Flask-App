@@ -4,4 +4,7 @@
     <h1>Index</h1>
 
     <strong>Conteudo da pagina index</strong>
+    {% if user %}
+        Olá, {{ user.name }}
+    {% endif %}
 {% endblock %}
