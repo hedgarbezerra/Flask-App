@@ -8,13 +8,14 @@ from app.models.user_img import UserImg
 from app.models_forms.user_form import userForm
 from app.models_forms.img_form import Profile_imgForm
 from app.models_forms.login_form import loginForm
+import datetime
 
 
 @app.route('/photo', methods=['GET', 'POST'])
 def create():
     form = Profile_imgForm()
 
-    if request.method =='POST' and form.validate_on_submit():
+    if request.method == 'POST' and form.validate_on_submit():
 
         user = User.query.get(1)
         data = form.photo.data
@@ -94,20 +95,27 @@ def login():
 
         if user and check_password_hash(user.password, password):
             flash('Sucessfully logged in!')
+            response = make_response(redirect('/index'))
 
             if remember:
-                pass
+                response.set_cookie('username', username,
+                                    expires=datetime.datetime.now() + datetime.timedelta(days=7))
             else:
                 session['username'] = username
-            return redirect('/index')
+
+            return response
 
     return render_template('users/login.html', form=form)
 
 
 @app.route('/logout', methods=['GET', 'DELETE'])
 def logout():
+    response = make_response(redirect('/login'))
     session.pop('username', None)
-    return redirect('/login')
+    response.delete_cookie('username')
+
+    flash('Successfully logged out')
+    return response
 
 
 def username_exists(username):
@@ -125,11 +133,15 @@ def email_exists(email):
 
 
 def current_user():
-    return username_exists(session['username'])
+    if 'username' in session:
+        return username_exists(session['username'])
+    if request.cookies.get('username'):
+        return username_exists(request.cookies.get('username'))
 
 
 def is_logged():
     if 'username' in session:
         return True
-
+    if request.cookies.get('username'):
+        return True
     return False
