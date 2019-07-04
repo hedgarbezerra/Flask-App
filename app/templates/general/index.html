@@ -9,8 +9,15 @@
         Olá, {{ user.name }}
     {% endif %}
 
+    <div class="row">
+        Pesquisar usuários:
+        <input type="text" id="search-txt" class="form-control" placeholder="Type the user's name">
+        <button id="search-btn" class="btn btn-outline-dark">Search</button>
+    </div>
+
     {% if users %}
-        <div class="card-deck text-center">
+    <div id="content" class="offset-sm-1 mt-3">
+        <div class="card-deck">
         {% for person in users %}
                     <div class="card text-white bg-dark mb-3 text-right border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-body">
@@ -22,9 +29,37 @@
                         </div>
                      </div>
                 {% if loop.index %3== 0 and not loop.last %}
-                    </div><div class="card-deck text-center">
+                    </div><div class="card-deck">
                 {% endif %}
         {% endfor %}
     {% endif %}
-    </div>
+        </div>
+        </div>
+        <script>
+            $(document).ready(function (){
+                $("#search-btn").click(function(){
+                    var searchContent = $("#search-txt").val();
+                    $.ajax({
+                        method: 'GET',
+                        url: "/user/"+searchContent,
+                        success: function (data) {
+                            $("#content>").remove();
+                            $("#content").append(
+                                "<div class='card text-white bg-dark mb-3 text-right border-primary mb-3' style='max-width:18rem;'\>"+
+                                "<div class='card-body'>" +
+                                "<h5 class='card-title'>"+data.name+ "<h5>" +
+                                "<h6 class='card-subtitle mb-2 text-muted'>" + data.username + "</h6>" +
+                                "<p class='card-text'> Algum texto qualquer e a senha:"+data.password+"</p>" +
+                                "<a href=# class='card-link'>Sans Lorem</a>" +
+                                "<a href=# class='card-link'>Bug bug</a>" +
+                                "</div>"
+                                )
+                        },
+                        error: function (data) {
+                            alert('Something went wrong')
+                        }
+                    })
+                })
+            })
+        </script>
 {% endblock %}

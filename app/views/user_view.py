@@ -1,7 +1,7 @@
 import os
 from werkzeug.utils import secure_filename
 from app import app, db
-from flask import request, render_template, redirect, flash, make_response, session, url_for
+from flask import request, render_template, redirect, flash, make_response, session, jsonify, json
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.models.user import User
 from app.models.user_img import UserImg
@@ -119,6 +119,17 @@ def password():
         return render_template('users/password_change.html', user=user, passwd_form=passwd_form)
 
     return redirect('/login')
+
+
+@app.route('/user/<id>', methods=['GET'])
+def get_user(id):
+    if is_logged():
+        user = User.query.get(id)
+        if user:
+            return jsonify(id=user.id, username=user.username, name=user.name, email=user.email,
+                           password=user.password, born_on=user.born_on)
+    return jsonify({'error':"user doesn't exist."})
+
 
 
 @app.route('/login', methods=['POST', 'GET'])
