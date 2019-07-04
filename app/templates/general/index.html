@@ -39,26 +39,39 @@
             $(document).ready(function (){
                 $("#search-btn").click(function(){
                     var searchContent = $("#search-txt").val();
-                    $.ajax({
-                        method: 'GET',
-                        url: "/user/"+searchContent,
-                        success: function (data) {
-                            $("#content>").remove();
-                            $("#content").append(
-                                "<div class='card text-white bg-dark mb-3 text-right border-primary mb-3' style='max-width:18rem;'\>"+
-                                "<div class='card-body'>" +
-                                "<h5 class='card-title'>"+data.name+ "<h5>" +
-                                "<h6 class='card-subtitle mb-2 text-muted'>" + data.username + "</h6>" +
-                                "<p class='card-text'> Algum texto qualquer e a senha:"+data.password+"</p>" +
-                                "<a href=# class='card-link'>Sans Lorem</a>" +
-                                "<a href=# class='card-link'>Bug bug</a>" +
-                                "</div>"
+                    if(searchContent==null || searchContent==""){
+                        toastr.warning('This field can not be empty');
+                    }
+                    else {
+                        $.ajax({
+                            method: 'GET',
+                            url: "/user/" + searchContent,
+                            success: function (data) {
+                                $("#content>").remove();
+                                if(data.name==undefined){
+                                    $("#content").append(
+                                        "<h1> Não existem usuários com esse nome</h1>"
+                                    )
+                                }
+                                else{
+                                     $("#content").append(
+                                    "<div class='card text-white bg-dark mb-3 text-right border-primary mb-3' style='max-width:18rem;'\>" +
+                                    "<div class='card-body'>" +
+                                    "<h5 class='card-title'>" + data.name + "<h5>" +
+                                    "<h6 class='card-subtitle mb-2 text-muted'>" + data.username + "</h6>" +
+                                    "<p class='card-text'> Algum texto qualquer e a senha:" + data.password + "</p>" +
+                                    "<a href=# class='card-link'>Sans Lorem</a>" +
+                                    "<a href=# class='card-link'>Bug bug</a>" +
+                                    "</div>"
                                 )
-                        },
-                        error: function (data) {
-                            alert('Something went wrong')
-                        }
-                    })
+                                }
+
+                            },
+                            error: function (data) {
+                               toastr.error('INTERNAL ERROR');
+                            }
+                        })
+                    }
                 })
             })
         </script>
