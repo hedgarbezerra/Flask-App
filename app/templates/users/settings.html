@@ -1,0 +1,64 @@
+{% extends 'shared/_layout.html' %}
+
+{% block title %} {{ user.name }} settings {% endblock %}
+
+{% block main %}
+
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+
+            {{ update_form.csrf_token }}
+
+            <div class="form-row justify-content-center">
+
+                <div class="form-group col-md-3 text-center">
+                    <label for="name"> Name </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ update_form.name(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="email"> Email  </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ update_form.email(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="born_on"> Birthday  </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ update_form.born_on(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <div class="form-group col-md-3 text-center">
+                    <label for="gender"> Gender </label>
+                    <div class="input-group mx-auto mb-3">
+                        {{ update_form.gender(class='form-control') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row justify-content-center">
+                <a href="/password" class="offset-3">Change password?</a>
+                <div class="form-group col-md-6">
+                    <div class="input-group">
+                        <button class="btn btn-outline-success offset-3">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+  {% include "shared/_errors.html" %}
+
+{% endblock %}

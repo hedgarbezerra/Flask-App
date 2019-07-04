@@ -1,5 +1,5 @@
    <script>
-        {% for field in form %}
+        {% for field in form or update_form or passwd_form %}
             {% for error in field.errors %}
                 toastr.error('{{ error }}');
             {% endfor %}

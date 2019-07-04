@@ -10,7 +10,7 @@
     {% endif %}
 
     {% if users %}
-        <div class="card-deck">
+        <div class="card-deck text-center">
         {% for person in users %}
                     <div class="card text-white bg-dark mb-3 text-right border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-body">
@@ -22,7 +22,7 @@
                         </div>
                      </div>
                 {% if loop.index %3== 0 and not loop.last %}
-                    </div><div class="card-deck">
+                    </div><div class="card-deck text-center">
                 {% endif %}
         {% endfor %}
     {% endif %}

@@ -1,13 +1,12 @@
 from instagram.client import InstagramAPI
+# from InstagramAPI import InstagramAPI
 
-access_token = "125914ad349c44da94e174de0d34e3da"
-client_secret = "3e3e0f9493714fffac9e730254796cf3"
-api = InstagramAPI(access_token=access_token, client_secret=client_secret)
 
-api2 = InstagramAPI(client_id='	6b9e76139be2402bab6d3a7ced76d6ac', client_secret='3e3e0f9493714fffac9e730254796cf3')
+access_token = "13469900807.f8a90b8.5c39b15f525e4ae3bc862cce368598f0"
+client_id = "f8a90b8bea394ba4b0c1b57bfd95a763"
+client_secret = "7556070071fb4d43ace6f58ed6dd9d8f"
 
-if __name__ == '__main__':
-
-    popular_media = api2.media_popular(count=20)
-    for media in popular_media:
-        print(media.images['standard_resolution'].url)
+api = InstagramAPI(client_id=client_id, client_secret=client_secret, access_token=access_token)
+popular_media = api.tag_recent_media('PRIDE')
+for media in popular_media:
+    print(media.images['standard_resolution'].url)

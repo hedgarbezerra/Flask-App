@@ -28,7 +28,8 @@ class userForm(FlaskForm):
     name = StringField('name', validators=[DataRequired(message="Your name can't be empty"), Length(min=1, max=100)])
 
     username = StringField('username', validators=[DataRequired(message="Your username can't be empty"),
-                                                   Length(min=6, max=15, message='The password must have at least 6'
+                                                   Length(min=6, max=15, message='The username must have at '
+                                                                                 'least 6'
                                                                                    ' characteres and max 15'),
                                                    validate_username])
 

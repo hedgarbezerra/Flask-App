@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="49ceee1c-3283-45f4-a71f-4ab0c37f77a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models_forms/user_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models_forms/user_form.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/general/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/general/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/general_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/general_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/shared/_errors.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/shared/_errors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/shared/_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/shared/_nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/insta_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/insta_wrapper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/user_view.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -54,34 +57,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/general_view.py">
+        <entry file="file://$PROJECT_DIR$/app/views/user_view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="240">
+              <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/user_view.py">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ad5daa1f-a6ee-4546-afa2-d675a0513a26/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="54" column="59" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
-              <folding>
-                <element signature="e#535#1357#0" />
-              </folding>
+            <state>
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/insta_wrapper.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/users/settings.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+            <state relative-caret-position="305">
+              <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/users/password_change.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -89,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/users/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="283">
+              <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -103,8 +112,8 @@
         <option value="Flask Main" />
         <option value="HTTP Request" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -112,6 +121,8 @@
     <findStrings>
       <find>UserForm</find>
       <find>col-md-3</find>
+      <find>form</find>
+      <find>form.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,19 +167,23 @@
         <option value="$PROJECT_DIR$/app/templates/shared/_messages.html" />
         <option value="$PROJECT_DIR$/testing/kk.py" />
         <option value="$PROJECT_DIR$/app/static/js/main.js" />
-        <option value="$PROJECT_DIR$/app/models_forms/user_form.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ad5daa1f-a6ee-4546-afa2-d675a0513a26/console.sql" />
-        <option value="$PROJECT_DIR$/app/templates/shared/_errors.html" />
         <option value="$PROJECT_DIR$/app/models_forms/login_form.py" />
         <option value="$PROJECT_DIR$/app/static/css/main.css" />
         <option value="$PROJECT_DIR$/app/templates/shared/_layout.html" />
         <option value="$PROJECT_DIR$/app/templates/users/signup.html" />
         <option value="$PROJECT_DIR$/app/templates/users/login.html" />
-        <option value="$PROJECT_DIR$/app/templates/shared/_nav.html" />
-        <option value="$PROJECT_DIR$/app/views/user_view.py" />
         <option value="$PROJECT_DIR$/app/views/general_view.py" />
-        <option value="$PROJECT_DIR$/app/templates/general/index.html" />
         <option value="$PROJECT_DIR$/app/views/insta_wrapper.py" />
+        <option value="$PROJECT_DIR$/app/models_forms/password_change_form.py" />
+        <option value="$PROJECT_DIR$/app/templates/general/index.html" />
+        <option value="$PROJECT_DIR$/app/models_forms/user_form.py" />
+        <option value="$PROJECT_DIR$/app/templates/shared/_nav.html" />
+        <option value="$PROJECT_DIR$/app/templates/shared/_errors.html" />
+        <option value="$PROJECT_DIR$/app/models_forms/update_user_form.py" />
+        <option value="$PROJECT_DIR$/app/templates/users/password_change.html" />
+        <option value="$PROJECT_DIR$/app/views/user_view.py" />
+        <option value="$PROJECT_DIR$/app/templates/users/settings.html" />
       </list>
     </option>
   </component>
@@ -192,6 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,6 +219,12 @@
               <item name="Flask-App" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flask-App" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flask-App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flask-App" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Flask-App" type="b2602c69:ProjectViewProjectNode" />
@@ -252,7 +274,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,7 +286,7 @@
     <property name="add_unversioned_files" value="true&#10;C:/Users/wsm/PycharmProjects/Flask-App/testing/teste01.http" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Lib/site-packages/autopep8.py" />
+    <property name="last_opened_file_path" value="$USER_HOME$/fcamaraHackaton/fcamara" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -363,7 +384,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.insta_wrapper">
+  <component name="RunManager" selected="Python.run">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
@@ -531,8 +552,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.insta_wrapper" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.insta_wrapper" />
         <item itemvalue="Python.kk" />
         <item itemvalue="HTTP Request.teste01#1" />
         <item itemvalue="Python.teste_dir" />
@@ -563,16 +584,21 @@
       <workItem from="1561658056578" duration="13517000" />
       <workItem from="1561679223390" duration="16082000" />
       <workItem from="1561740432871" duration="11804000" />
+      <workItem from="1561773331673" duration="163000" />
+      <workItem from="1561826799000" duration="4118000" />
+      <workItem from="1562172249619" duration="1092000" />
+      <workItem from="1562173914130" duration="7892000" />
+      <workItem from="1562196534745" duration="4302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112865000" />
+    <option name="totallyTimeSpent" value="130432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30332828" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -605,28 +631,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views/user_view.py</url>
-          <line>81</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views/user_view.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views/user_view.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/views/user_view.py</url>
-          <line>117</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -637,10 +641,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Flask_App$insta_wrapper.coverage" NAME="insta_wrapper Coverage Results" MODIFIED="1561762001388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/views" />
+    <SUITE FILE_PATH="coverage/Flask_App$insta_wrapper.coverage" NAME="insta_wrapper Coverage Results" MODIFIED="1562188113971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/views" />
     <SUITE FILE_PATH="coverage/Flask_App$teste_dir.coverage" NAME="teste_dir Coverage Results" MODIFIED="1559508347715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testing" />
     <SUITE FILE_PATH="coverage/Flask_App$kk.coverage" NAME="kk Coverage Results" MODIFIED="1561672462168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testing" />
-    <SUITE FILE_PATH="coverage/Flask_App$run.coverage" NAME="run Coverage Results" MODIFIED="1561748797695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Flask_App$run.coverage" NAME="run Coverage Results" MODIFIED="1562200746955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
@@ -652,22 +656,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/migrations/versions/0fe065e94c90_.py" />
-    <entry file="file://$USER_HOME$/Desktop/HTMLCSS/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="86" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/db_view.py" />
-    <entry file="file://$PROJECT_DIR$/testing/teste01.http">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -806,23 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models_forms/user_form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/shared/_errors.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models_forms/login_form.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -830,13 +801,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ad5daa1f-a6ee-4546-afa2-d675a0513a26/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -883,50 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/users/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/shared/_nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/general_view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/API deploy/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2948">
-          <caret line="128" column="116" selection-start-line="128" selection-start-column="62" selection-end-line="128" selection-end-column="116" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/general/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding>
-            <element signature="e#421#446#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Treinaweb/Other/treino02.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -961,20 +881,119 @@
     <entry file="file://$PROJECT_DIR$/../PythonCourse/DBAPI/main.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_view.py">
+    <entry file="file://$PROJECT_DIR$/app/views/insta_wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="54" column="59" selection-start-line="54" selection-start-column="59" selection-end-line="54" selection-end-column="59" />
+        <state relative-caret-position="80">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models_forms/password_change_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
           <folding>
-            <element signature="e#535#1357#0" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/insta_wrapper.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/shared/_nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="64" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+        <state relative-caret-position="1020">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/general/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="91" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/API deploy/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="221" column="27" lean-forward="true" selection-start-line="221" selection-start-column="8" selection-end-line="221" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/general_view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models_forms/user_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="30" column="94" selection-start-line="30" selection-start-column="94" selection-end-line="30" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/shared/_errors.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models_forms/update_user_form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/users/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="85" column="2" selection-start-line="85" selection-start-column="2" selection-end-line="85" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ad5daa1f-a6ee-4546-afa2-d675a0513a26/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/users/password_change.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user_view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/users/settings.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
         </state>
       </provider>
     </entry>
